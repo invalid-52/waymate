@@ -1,0 +1,37 @@
+{
+  "name": "waymate",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "check:backend": "node --check backend/server.js && node --check \"api/[path].js\" && node --check \"api/app/[path].js\" && node --check \"api/auth/[path].js\" && node --check \"api/user/[path].js\"",
+    "start:api": "node backend/server.js"
+  },
+  "dependencies": {
+    "lucide-react": "^1.44.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "oxlint": "^1.79.0",
+    "vite": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
